@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js",
-    "preinstall": "rm -rf node_modules package-lock.json"
+    "start": "node app.js"
   },
   "dependencies": {
     "express": "^4.18.2",
