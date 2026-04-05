@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - VisionAI</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="bg-light">
+    <nav class="dash-nav">
+        <div class="container flex-row">
+            <a href="/dashboard" class="logo">Vision<span>AI</span> Dash</a>
+            <a href="/logout" class="logout">Logout</a>
+        </div>
+    </nav>
+
+    <div class="container dash-content">
+        <div class="card">
+            <div class="card-header">
+                <h2>Incoming Contacts</h2>
+                <p>Manage your latest marketing leads.</p>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Address</th>
+                        <th>Phone</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% contacts.forEach(contact => { %>
+                        <tr>
+                            <td class="bold"><%= contact.name %></td>
+                            <td><%= contact.address %></td>
+                            <td><%= contact.phone %></td>
+                            <td><%= contact.email %></td>
+                        </tr>
+                    <% }) %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
